@@ -68,7 +68,7 @@
   (let [o (or optimizations :none)
         c {:elide-asserts no-validate}]
     (set-env! :source-paths #{"lib/src" "app/src"} :resource-paths #{"tst/src" "app/rsc"})
-    (comp (init) (connect) (watch) (speak) (hoplon) (reload) (cljs :optimizations o :compiler-options c) (serve) (t/test :namespaces namespaces))))
+    (comp (init) (connect) (watch) (speak) (hoplon) (cljs :optimizations o :compiler-options c) (serve) (t/test :namespaces namespaces))))
 
 (deftask test
   "Continuously rebuild the test suite during development.
@@ -81,7 +81,7 @@
   (let [o (or optimizations :none)
         c {:elide-asserts no-validate}]
     (set-env! :source-paths #{"lib/src" "app/src"} :resource-paths #{"tst/src" "app/rsc"})
-    (comp (hoplon) (reload) (cljs :optimizations o :compiler-options c) (serve) (t/test :namespaces namespaces))))
+    (comp (hoplon) (cljs :optimizations o :compiler-options c) (serve) (t/test :namespaces namespaces))))
 
 (task-options!
   init   {:file            "cnf/local.env"}

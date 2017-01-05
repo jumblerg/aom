@@ -1,10 +1,10 @@
 language: clojure
 jdk:
   - oraclejdk8
+addons:
+  sauce_connect: true
 install:
   - curl -s https://api.github.com/repos/boot-clj/boot/releases |grep 'download_url.*boot\.sh' |head -1 |sed 's/^.*[:] /wget -O boot /' |bash
   - chmod 755 boot
-addons:
-  sauce_connect: true
 script:
   - ./boot test
