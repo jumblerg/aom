@@ -81,7 +81,7 @@
   (let [o (or optimizations :none)
         c {:elide-asserts no-validate}]
     (set-env! :source-paths #{"lib/src" "app/src"} :resource-paths #{"tst/src" "app/rsc"})
-    (comp (init) (hoplon) (reload) (cljs :optimizations o :compiler-options c) (serve) (t/test :namespaces namespaces))))
+    (comp (hoplon) (reload) (cljs :optimizations o :compiler-options c) (serve) (t/test :namespaces namespaces))))
 
 (task-options!
   init   {:file            "cnf/local.env"}
