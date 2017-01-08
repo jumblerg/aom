@@ -1,4 +1,4 @@
-(ns hoplon-test.ui
+(ns hoplon.test.aom
   (:import
     [java.net                    URL]
     [org.openqa.selenium         By Dimension Point]

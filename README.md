@@ -1,9 +1,9 @@
-# UI [![build status][1]][2]
+# Application Object Model [![build status][1]][2]
 a *cohesive* layer of *composable* abstractions over the dom.
 
 [](dependency)
 ```clojure
-[hoplon/ui "0.1.0-SNAPSHOT"] ;; latest release
+[hoplon/aom "0.1.0-SNAPSHOT"] ;; latest release
 ```
 [](/dependency)
 

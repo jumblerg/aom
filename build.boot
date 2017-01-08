@@ -85,12 +85,12 @@
 
 (task-options!
   init   {:file            "cnf/local.env"}
-  pom    {:project         'hoplon/ui
+  pom    {:project         'hoplon/aom
           :version         +version+
           :description     "a cohesive layer of composable abstractions over the dom."
-          :url             "https://github.com/hoplon/ui"
-          :scm             {:url "https://github.com/hoplon/ui"}
+          :url             "https://github.com/hoplon/aom"
+          :scm             {:url "https://github.com/hoplon/aom"}
           :license         {"EPL" "http://www.eclipse.org/legal/epl-v10.html"}}
   serve  {:port            5000}
-  test   {:namespaces     '#{hoplon-test.ui}})
+  test   {:namespaces     '#{hoplon.test.aom}})
 
