@@ -5,7 +5,7 @@
     [javelin.core :refer [cell cell= defc defc=]]
     [hoplon.core  :refer [defelem for-tpl when-tpl case-tpl]]
     [hoplon.aom.units  :refer [%]]
-    [hoplon.aom.colors :refer [hsl rgb]]
+    [hoplon.aom.colors :refer [hsl rgb lgr]]
     [hoplon.aom.attrs  :refer [s sh sv fc]]
     [hoplon.aom.elems  :refer [flow pile]]))
 
@@ -15,7 +15,7 @@
   (hoplon.core/body :css/height "100%" :css/margin 0
     (flow s (% 1 1)
       (pile sh (% 1 2) sv (% 1 1) fc (hsl 0 (% 1 3) (% 1 2))
-        (flow s (% 1 1)
+        (flow s (% 1 1) fc (lgr (% 3 4) 0x0000 0xFFFFFF)
           "foo")
         (flow s (% 1 1)
           "bar"))
